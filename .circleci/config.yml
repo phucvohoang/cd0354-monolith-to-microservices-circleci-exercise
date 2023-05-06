@@ -8,8 +8,10 @@ jobs:
     working_directory: ~/app
     environment:
       MY_VAR: "my-value"
+      TESTING: "TESTING VARIABLE"
     steps:
       - checkout
       - run: echo $MY_VAR
+      - run: echo $TESTING
       - run: node --version
       - run: npm install
